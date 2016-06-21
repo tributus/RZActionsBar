@@ -1,0 +1,22 @@
+{
+  "name": "rutezangada-actionsbarwidget",
+  "version": "0.1.0",
+  "description": "actions bar widget",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tributus/RZActionsBar.git"
+  },
+  "keywords": [
+    "actions"
+  ],
+  "author": "Anderson Norberto Santos (andersonhtm@hotmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tributus/RZActionsBar/issues"
+  },
+  "homepage": "https://github.com/tributus/RZActionsBar#readme"
+}

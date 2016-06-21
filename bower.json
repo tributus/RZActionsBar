@@ -1,0 +1,20 @@
+{
+  "name": "rutezangada-actionsbarwidget",
+  "description": "actions bar widget",
+  "main": "index.js",
+  "authors": [
+    "Anderson Norberto Santos (andersonhtm@hotmail.com)"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "actions"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

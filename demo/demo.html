@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ActionsBar - Demo</title>
+    <!--<link media="all" rel="stylesheet" href="../bower_components/semantic-ui-reset/reset.min.css">-->
+    <!--<link media="all" rel="stylesheet" href="../bower_components/semantic-ui-site/site.min.css">-->
+    <!--<link media="all" rel="stylesheet" href="../bower_components/semantic-ui-header/header.min.css">-->
+    <!--<link media="all" rel="stylesheet" href="../bower_components/semantic-ui-breadcrumb/breadcrumb.min.css">-->
+    <link media="all" rel="stylesheet" href="../bower_components/semantic/dist/semantic.min.css">
+</head>
+<body>
+<br><br>
+<div class="ui very padded container">
+    <div class="ui sixteen column row">
+        <div class="column">
+            <button id="b1" class="ui primary button">disable</button>
+            <button id="b2" class="ui primary button">enable</button>
+            <button id="b3" class="ui primary button">hide</button>
+            <button id="b4" class="ui primary button">show</button>
+        </div>
+    </div>
+
+</div>
+<br><br>
+<div class="ui padded container">
+    <div id="actions"></div>
+</div>
+</body>
+<script type="text/javascript" src="../bower_components/RZClientEngine/dist/RZClientEngine-standalone.min.js"></script>
+<script type="text/javascript" src="../bower_components/semantic/dist/semantic.min.js"></script>
+<!--<script type="text/javascript" src="../bower_components/semantic-ui-site/site.min.js"></script>-->
+<script type="text/javascript" src="../dist/RZActionsBarWidget.js"></script>
+<script>
+    var params = {
+       items:[
+           {
+               renderer:"button", //default
+               text:"Action 1",
+               action:"action-1",
+               actionData:{
+                   someProperty:"some value"
+               }
+           },
+           {text:"Action 2", action:"action 1"},
+           {text:"Action 3", action:"action 3"}
+       ]
+    };
+    var widgetInstance = ruteZangada.renderWidget("rz-actions-bar", "actions",params);
+    widgetInstance.on("action-raised",function(s,e){
+        console.log("action raised for",s, "with", e);
+    });
+    $(".ui.button").click(function (e) {
+        var id = e.currentTarget.id;
+        switch (id){
+            case "b1": widgetInstance.disable("action-1"); break;
+            case "b2": widgetInstance.enable("action-1"); break;
+            case "b3": widgetInstance.hide("action-1"); break;
+            case "b4": widgetInstance.show("action-1"); break;
+        }
+    });
+</script>
+</html>

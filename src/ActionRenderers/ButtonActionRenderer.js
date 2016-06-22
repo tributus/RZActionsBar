@@ -30,7 +30,7 @@ rz.widgets.ActionsBarWidgetHelpers.ActionsBarRenderers.registerRenderer("button"
             params.action,
             this.renderHelpers.setActionsData(params.actionData),
             (params.renderTag=="a")?'a':'button',
-            (params.renderTag=="a")?'href="#"' : ':'
+            (params.renderTag=="a")?'href="#"' : ''
         );
         registerElement("#" + uid);
         return sb.toString();

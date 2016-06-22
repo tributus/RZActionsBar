@@ -12,6 +12,9 @@ rz.widgets.ActionsBarWidget = ruteZangada.widget("rz-actions-bar",
             var elementID = generateRandomID(8);
             var defaultParams = {
                 elementID : elementID,
+                ui:{
+                    rootElementClass:"ui flat segment"
+                },
                 items:[]
             };
             $this.params = $.extend(true, {}, defaultParams, p);
@@ -57,7 +60,7 @@ rz.widgets.ActionsBarWidget = ruteZangada.widget("rz-actions-bar",
 
         this.render = function (target){
             var sb = new StringBuilder();
-            sb.appendFormat('<div id="{0}_actionsbar" class="ui flat segment rz-actionsbarwidget">',$this.params.elementID);
+            sb.appendFormat('<div id="{0}_actionsbar" class="{1} rz-actionsbarwidget">',$this.params.elementID,$this.params.ui.rootElementClass);
             renderActionElements(sb);
             sb.appendFormat('</div>');
             $("#" + target).html(sb.toString());

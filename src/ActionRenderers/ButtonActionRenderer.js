@@ -23,12 +23,14 @@ rz.widgets.ActionsBarWidgetHelpers.ActionsBarRenderers.registerRenderer("button"
     render:function(params,registerElement){
         var uid = generateRandomID(18);
         var sb = new StringBuilder();
-        sb.appendFormat('<a id="{1}" href="#" data-action="{3}" data-action-params="{4}" class="ui {2} button">{0}</a>',
+        sb.appendFormat('<{5} id="{1}" {6}data-action="{3}" data-action-params="{4}" class="ui {2} button">{0}</{5}>',
             params.text,
             uid,
             params.cssClass || "default",
             params.action,
-            this.renderHelpers.setActionsData(params.actionData)
+            this.renderHelpers.setActionsData(params.actionData),
+            (params.renderTag=="a")?'a':'button',
+            (params.renderTag=="a")?'href="#"' : ':'
         );
         registerElement("#" + uid);
         return sb.toString();

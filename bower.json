@@ -18,6 +18,10 @@
     "tests"
   ],
   "devDependencies": {
-    "RZClientEngine": "rutezangada-client-engine#^0.1.2"
+    "RZClientEngine": "rutezangada-client-engine#^0.1.2",
+    "semantic-ui-reset": "^2.1.7",
+    "semantic-ui-site": "^2.1.7",
+    "semantic-ui-button": "^2.1.7",
+    "semantic-ui-segment": "^2.1.7"
   }
 }

@@ -49,16 +49,27 @@ rz.widgets.ActionsBarWidgetHelpers.ActionsBarRenderers.registerRenderer("button"
         }
     },
     render:function(params,registerElement){
+        
+        var resolveInitialVisibility = function(){
+            if(params.display==="none"){
+                return 'style="display:none"';
+            }
+            else{
+                return "";
+            }
+        };
+        
         var uid = generateRandomID(18);
         var sb = new StringBuilder();
-        sb.appendFormat('<{5} id="{1}" {6}data-action="{3}" data-action-params="{4}" class="ui {2} button">{0}</{5}>',
+        sb.appendFormat('<{5} id="{1}" {6}data-action="{3}" data-action-params="{4}" class="ui {2} button" {7}>{0}</{5}>',
             params.text,
             uid,
             params.cssClass || "default",
             params.action,
             this.renderHelpers.setActionsData(params.actionData),
             (params.renderTag=="a")?'a':'button',
-            (params.renderTag=="a")?'href="#"' : ''
+            (params.renderTag=="a")?'href="#"' : '',
+            resolveInitialVisibility()
         );
         registerElement("#" + uid);
         return sb.toString();

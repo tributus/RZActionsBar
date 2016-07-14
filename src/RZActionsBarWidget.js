@@ -58,12 +58,12 @@ rz.widgets.ActionsBarWidget = ruteZangada.widget("rz-actions-bar",
             return params;
         };
 
-        this.render = function (target){
+        this.render = function (target,params,renderDOMElement){
             var sb = new StringBuilder();
             sb.appendFormat('<div id="{0}_actionsbar" class="{1} rz-actionsbarwidget">',$this.params.elementID,$this.params.ui.rootElementClass);
             renderActionElements(sb);
             sb.appendFormat('</div>');
-            plot({
+            renderDOMElement({
                 sender:$this,
                 target:"#" + target,
                 data:sb,

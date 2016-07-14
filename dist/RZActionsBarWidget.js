@@ -163,8 +163,15 @@ rz.widgets.ActionsBarWidget = ruteZangada.widget("rz-actions-bar",
             sb.appendFormat('<div id="{0}_actionsbar" class="{1} rz-actionsbarwidget">',$this.params.elementID,$this.params.ui.rootElementClass);
             renderActionElements(sb);
             sb.appendFormat('</div>');
-            $("#" + target).html(sb.toString());
-            executePostRenderScripts();
+            plot({
+                sender:$this,
+                target:"#" + target,
+                data:sb,
+                method:"html",
+                doAfterRenderAction:executePostRenderScripts
+            });
+            //$("#" + target).html(sb.toString());
+            //executePostRenderScripts();
         };
         
         this.disable = function(action){

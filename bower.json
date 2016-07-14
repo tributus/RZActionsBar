@@ -24,6 +24,7 @@
     "semantic-ui-reset": "^2.1.7",
     "semantic-ui-site": "^2.1.7",
     "semantic-ui-button": "^2.1.7",
-    "semantic-ui-segment": "^2.1.7"
+    "semantic-ui-segment": "^2.1.7",
+    "rutezangada-clientengine": "^0.5.2"
   }
 }

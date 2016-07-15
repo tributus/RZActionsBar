@@ -59,11 +59,11 @@ rz.widgets.ActionsBarWidgetHelpers.ActionsBarRenderers.registerRenderer("button"
             }
         };
         
-        var uid = generateRandomID(18);
+        var uid = params.id || generateRandomID(18);
         var sb = new StringBuilder();
         sb.appendFormat('<{5} id="{1}" {6}data-action="{3}" data-action-params="{4}" class="ui {2} button" {7}>{0}</{5}>',
             params.text,
-            params.id || uid,
+            uid,
             params.cssClass || "default",
             params.action,
             this.renderHelpers.setActionsData(params.actionData),

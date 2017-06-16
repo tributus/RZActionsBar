@@ -8,7 +8,7 @@ module.exports = function (grunt) {
                     "src/NamespaceDeclares.js",
                     "src/InterfaceAndEvents.js",
                     "src/ActionsBarHelpers.js",
-                    "src/ActionRenderers/*.js",
+                    "src/plugins/ActionRenderers/*.js",
                     "src/RZActionsBarWidget.js"
                 ]
             },

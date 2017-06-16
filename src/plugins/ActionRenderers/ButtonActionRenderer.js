@@ -63,7 +63,7 @@ rz.widgets.ActionsBarWidgetHelpers.ActionsBarRenderers.registerRenderer("button"
     doAction:function(action,el,params,callback){
         switch(action){
             case "disable":$(el).attr("disabled","disabled").addClass("disabled"); break;
-            case "enable":$(el).removeAttr("disabled").removeClass("disabled"); break;break;
+            case "enable":$(el).removeAttr("disabled").removeClass("disabled"); break;
             case "show":$(el).show(); break;
             case "hide": $(el).hide(); break;
         }

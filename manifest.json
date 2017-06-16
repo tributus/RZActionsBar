@@ -1,0 +1,26 @@
+{
+  "version":"0.1.0",
+  "name":"RZActionsBar",
+  "description":"Actions Bar Widget",
+  "icons":{
+    "small":"rzactionsbar-small.png",
+    "normal":"rzactionsbar-normal.png",
+    "large":"rzactionsbar-large.png"
+  },
+  "developer":{
+    "name":"Anderson Norberto Santos",
+    "url":"https://github.com/tributus"
+  },
+  "categories":["toolbars","actionbars"],
+  "dependencies":{
+    "script":[
+      {"name":"rutezangada-clientengine", "version":"0.5.2"}
+    ],
+    "stylesheet":[
+      { "name":"semantic-ui-reset/reset.min.css", "version":"2.1.7"},
+      { "name":"semantic-ui-site/site.min.css", "version":"2.1.7"},
+      { "name":"semantic-ui-segment/segment.min.css", "version":"2.1.7"}
+    ]
+  },
+  "extensions":[]
+}

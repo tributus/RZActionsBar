@@ -1,0 +1,22 @@
+{
+  "version":"0.1.0",
+  "name":"ButtonActionRenderer",
+  "description":"Button action renderer for RZActionsBar Widget",
+  "icons":{
+    "small":"buttonactionrenderer-small.png",
+    "normal":"buttonactionrenderer-normal.png",
+    "large":"buttonactionrenderer-large.png"
+  },
+  "developer":{
+    "name":"Anderson Norberto Santos",
+    "url":"https://github.com/tributus"
+  },
+  "categories":["toolbars","actionbars"],
+  "dependencies":{
+    "script":[],
+    "stylesheet":[
+      { "name":"semantic-ui-reset/button.min.css", "version":"2.1.7"}
+    ]
+  },
+  "extensions":[]
+}

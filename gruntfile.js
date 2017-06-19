@@ -8,8 +8,10 @@ module.exports = function (grunt) {
                     "src/NamespaceDeclares.js",
                     "src/InterfaceAndEvents.js",
                     "src/ActionsBarHelpers.js",
-                    "src/plugins/ActionRenderers/*.js",
                     "src/RZActionsBarWidget.js"
+                ],
+                plugins:[
+                    "src/plugins/ButtonActionRenderer/*.js"
                 ]
             },
             concat: {
@@ -26,6 +28,23 @@ module.exports = function (grunt) {
                     files: {
                         "dist/RZActionsBarWidget.min.js": ['dist/RZActionsBarWidget.js']
                     }
+                },
+                buttonactionrenderer_plugin: {
+                    files: {
+                        "dist/plugins/ButtonActionRenderer/ButtonActionRenderer.min.js": ['dist/plugins/ButtonActionRenderer/ButtonActionRenderer.js']
+                    }
+                }
+            },
+            copy:{
+                ButtonActionRenderer_plugin:{
+                    cwd: 'src/plugins/ButtonActionRenderer/',
+                    src:'*.*',
+                    dest:'dist/plugins/ButtonActionRenderer',
+                    expand:true
+                },
+                manifest:{
+                    src:'manifest.json',
+                    dest:'dist/manifest.json'
                 }
             }
         }
@@ -33,9 +52,10 @@ module.exports = function (grunt) {
 // Plugins do Grunt
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
 
-    grunt.registerTask('default', ['concat', 'uglify']);
+    grunt.registerTask('default', ['copy','concat', 'uglify']);
 
 
 };

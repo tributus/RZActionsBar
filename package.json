@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/tributus/RZActionsBar/issues"
   },
-  "homepage": "https://github.com/tributus/RZActionsBar#readme"
+  "homepage": "https://github.com/tributus/RZActionsBar#readme",
+  "devDependencies": {
+    "grunt-contrib-copy": "^1.0.0"
+  }
 }

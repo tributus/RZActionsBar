@@ -1,7 +1,7 @@
 /**
  * Created by anderson.santos on 21/06/2016.
  */
-rz.widgets.ActionsBarWidgetHelpers.ActionsBarRenderers.registerRenderer("button",{
+rz.widgets.extensions.extension("button","rutezangada.widgets.RZActionsBar.ActionRenderer",{
     renderHelpers:{
         setActionsData: function(d){
             if(d!==undefined){

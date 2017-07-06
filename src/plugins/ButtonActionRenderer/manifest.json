@@ -12,11 +12,7 @@
     "url":"https://github.com/tributus"
   },
   "categories":["toolbars","actionbars"],
-  "dependencies":{
-    "script":[],
-    "stylesheet":[
-      { "name":"semantic-ui-reset/button.min.css", "version":"2.1.7"}
-    ]
-  },
-  "extensions":[]
+  "dependencies":[
+    { "name":"semantic-ui-button/button.css", "version":"2.1.7"}
+  ]
 }

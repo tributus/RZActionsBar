@@ -12,16 +12,12 @@
     "url":"https://github.com/tributus"
   },
   "categories":["toolbars","actionbars"],
-  "dependencies":{
-    "script":[
-      {"name":"rutezangada-clientengine", "version":"0.5.2"}
-    ],
-    "stylesheet":[
-      { "name":"semantic-ui-reset/reset.min.css", "version":"2.1.7"},
-      { "name":"semantic-ui-site/site.min.css", "version":"2.1.7"},
-      { "name":"semantic-ui-segment/segment.min.css", "version":"2.1.7"}
-    ]
-  },
+  "dependencies":[
+    {"name":"rutezangada-clientengine", "version":"0.8.0"},
+    { "name":"semantic-ui/reset.min.css", "version":"2.1.7"},
+    { "name":"semantic-ui/site.min.css", "version":"2.1.7"},
+    { "name":"semantic-ui/segment.min.css", "version":"2.1.7"}
+  ],
   "extensions":
   [
     {
